@@ -3,8 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Haniye Fereidooni · UI/UX designer</title>
-<meta name="description" content="Haniye Fereidooni, UI/UX designer for complex B2B platforms, UX research and design systems.">
+<title>Haniye Fereidooni · Product designer</title>
+<meta name="description" content="Haniye Fereidooni, product designer for complex B2B platforms, UX research and design systems.">
+<meta property="og:title" content="Haniye Fereidooni · Product designer">
+<meta property="og:description" content="Haniye Fereidooni, product designer for complex B2B platforms, UX research and design systems.">
+<meta property="og:image" content="https://hanie-fre.github.io/assets/og/index.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMTAgMTEwIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDIwKSI+PHBhdGggZD0iTTQgMzVBNDQgNDQgMCAwIDEgNzQgMzVBNDQgNDQgMCAwIDEgNCAzNVoiIGZpbGw9IiNENjJBMUUiLz48cGF0aCBkPSJNNzAgMzVMMTA2IDEyVjU4WiIgZmlsbD0iI0Q2MkExRSIvPjxjaXJjbGUgY3g9IjIyIiBjeT0iMzEiIHI9IjQiIGZpbGw9IiNmZmYiLz48L2c+PC9zdmc+" type="image/svg+xml">
 <style>
@@ -48,7 +52,7 @@ body {
   font-size: 17px;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 [id] { scroll-margin-top: 96px; }
 img { display: block; max-width: 100%; height: auto; }
@@ -231,12 +235,12 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--soft); line-height:
 .scales i { position: absolute; border-radius: 50%; border: 3px solid #fff; display: block; }
 
 /* ---------- home ---------- */
-.hero { position: relative; overflow: hidden; min-height: max(640px, 100svh); }
+.hero { position: relative; overflow: hidden; min-height: max(640px, 100svh); display: flex; flex-direction: column; justify-content: flex-end; }
 .hero .scales { position: absolute; top: 0; right: 0; bottom: 0; width: 50%; }
 .home-nav { position: absolute; z-index: 4; top: 24px; left: var(--pad); display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .home-nav .pill-nav { background: var(--g1); }
 .home-nav .btn.sm { height: 46px; padding: 0 22px; border-radius: 999px; }
-.hero-text { position: absolute; z-index: 2; left: var(--pad); right: calc(50% + clamp(32px, 4vw, 64px)); bottom: clamp(56px, 8vw, 110px); max-width: 600px; display: flex; flex-direction: column; gap: 22px; }
+.hero-text { position: relative; z-index: 2; margin-left: var(--pad); width: calc(50% - var(--pad) - clamp(32px, 4vw, 64px)); max-width: 600px; padding-top: 112px; padding-bottom: clamp(56px, 8vw, 110px); display: flex; flex-direction: column; gap: 22px; }
 .hero-text h1 { font-weight: 700; font-size: clamp(52px, 6.4vw, 92px); line-height: 0.95; letter-spacing: -0.025em; color: var(--red); }
 .hero-text p { font-size: clamp(20px, 1.7vw, 24px); line-height: 1.4; color: var(--soft); }
 .hero-text p b { color: var(--ink); font-weight: 600; }
@@ -408,6 +412,150 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--soft); line-height:
 .floor { position: relative; height: 150px; margin-top: 64px; }
 .floor .scales { position: absolute; inset: 0; }
 
+
+
+
+
+/* ---------- designing with AI ---------- */
+.ai-ins { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--gap); }
+.ai-in { display: flex; flex-direction: column; gap: 10px; padding: clamp(20px, 2vw, 28px); border-radius: var(--r-md); border: 1px solid var(--line); background: var(--paper); }
+.ai-in .t { font-size: clamp(20px, 1.6vw, 23px); font-weight: 700; letter-spacing: -0.01em; line-height: 1.15; }
+.ai-in .for { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); }
+.ai-in .d { font-size: 15.5px; line-height: 1.5; color: var(--muted); }
+.ai-eq { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; font-size: 15px; }
+.ai-eq span { height: 34px; display: inline-flex; align-items: center; padding: 0 14px; border-radius: 17px; background: var(--g1); font-weight: 500; }
+.ai-eq i { font-style: normal; color: var(--soft); }
+.ai-eq b { height: 34px; display: inline-flex; align-items: center; padding: 0 16px; border-radius: 17px; background: var(--ink); color: #fff; font-weight: 600; }
+.fit-rows { border-top: 1px solid var(--ink); }
+.fit-row { display: grid; grid-template-columns: minmax(140px, 1fr) minmax(0, 2fr) minmax(0, 1.6fr); gap: clamp(16px, 2.6vw, 40px); padding: 22px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.fit-row .st { font-size: clamp(20px, 1.7vw, 24px); font-weight: 700; letter-spacing: -0.01em; }
+.fit-row p { font-size: 17px; line-height: 1.5; color: var(--ink-2); }
+.fit-row p.me { color: var(--ink); font-weight: 600; }
+.fit-row p.me::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--red); margin-right: 10px; transform: translateY(-2px); }
+.fit-head { padding: 14px 0; }
+.ai-rules { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(28px, 4vw, 64px); align-items: start; }
+.ai-rules ul { list-style: none; margin: 0; padding: 0; }
+.ai-rules li { display: flex; gap: 20px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid #2A2A2A; font-size: clamp(22px, 2.2vw, 32px); font-weight: 600; letter-spacing: -0.015em; line-height: 1.2; }
+.ai-rules li:first-child { padding-top: 0; }
+@media (max-width: 1100px) {
+  .ai-ins { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 860px) {
+  .ai-ins { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fit-row { grid-template-columns: 1fr; gap: 6px; }
+  .fit-head { display: none; }
+  .ai-rules { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .ai-ins { grid-template-columns: 1fr; }
+}
+
+/* ---------- in 30 seconds ---------- */
+.tldr { margin-top: clamp(28px, 3vw, 40px); border: 1px solid var(--ink); border-radius: var(--r-md); padding: clamp(20px, 2.2vw, 30px); display: grid; gap: 18px; position: relative; }
+.tldr .tl-k { position: absolute; top: -12px; left: clamp(16px, 2vw, 26px); background: var(--paper); padding: 0 10px; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); }
+.tl-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 2.6vw, 40px); }
+.tl-cols > div { display: grid; gap: 8px; align-content: start; }
+.tl-cols > div + div { border-left: 1px solid var(--line); padding-left: clamp(20px, 2.6vw, 40px); }
+.tl-cols p { font-size: 17px; line-height: 1.5; color: var(--ink-2); }
+.tl-cols > div:last-child p { color: var(--ink); font-weight: 600; }
+@media (max-width: 860px) {
+  .tl-cols { grid-template-columns: 1fr; gap: 16px; }
+  .tl-cols > div + div { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); padding-top: 16px; }
+}
+
+/* ---------- home: project shortcuts ---------- */
+.hero-text { gap: 18px; }
+.quick { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+.quick ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.quick li a { display: grid; grid-template-columns: 30px auto minmax(0, 1fr) 20px; align-items: baseline; gap: 14px; padding: 9px 0; border-bottom: 1px solid var(--line); transition: padding .25s ease; }
+.quick .qn { font-size: 13px; color: var(--faint); font-variant-numeric: tabular-nums; }
+.quick .qt { font-size: 20px; font-weight: 700; letter-spacing: -0.01em; color: var(--ink); transition: color .2s ease; }
+.quick .qk { font-size: 15px; color: var(--soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.quick .qa { color: var(--red); font-size: 18px; justify-self: end; transition: transform .25s ease; }
+.quick li a:hover, .quick li a:focus-visible { padding-left: 8px; }
+.quick li a:hover .qt, .quick li a:focus-visible .qt { color: var(--red); }
+.quick li a:hover .qa, .quick li a:focus-visible .qa { transform: translateX(4px); }
+.quick-all { align-self: flex-start; font-size: 15px; font-weight: 600; color: var(--ink); border-bottom: 1.5px solid var(--ink); padding-bottom: 2px; }
+.quick-all .arrow { color: var(--red); }
+.qprev { position: absolute; top: 0; right: 0; bottom: 0; width: 50%; z-index: 2; pointer-events: none; }
+.qprev img { position: absolute; left: 50%; top: 50%; width: min(540px, 34vw); aspect-ratio: 16 / 10; object-fit: cover; object-position: top center; border-radius: 18px; background: #fff; box-shadow: 0 30px 70px rgba(17,17,17,.28); opacity: 0; transform: translate(-50%, -46%) rotate(-3deg) scale(.94); transition: opacity .3s ease, transform .45s cubic-bezier(.3,1.3,.5,1); }
+.qprev img.on { opacity: 1; transform: translate(-50%, -50%) rotate(-3deg) scale(1); }
+@media (max-width: 860px) {
+  .qprev { display: none; }
+  .quick .qt { font-size: 19px; }
+}
+@media (max-width: 420px) {
+  .quick li a { grid-template-columns: 26px auto minmax(0, 1fr) 16px; gap: 10px; }
+  .quick .qk { font-size: 13.5px; }
+}
+
+/* ---------- hobbies ---------- */
+.hob-top { padding-bottom: 4px; }
+.hstage { position: relative; margin-top: clamp(32px, 3vw, 44px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 600px) minmax(0, 1fr); align-items: center; gap: 28px; }
+.hside { display: flex; flex-direction: column; gap: 18px; align-items: center; }
+.hcard { position: relative; width: 300px; max-width: 100%; padding: 16px 18px 18px; border-radius: 18px; border: 1px solid var(--line); background: #fff; color: var(--ink); box-shadow: 0 10px 30px rgba(17,17,17,.07); display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 6px 14px; align-items: center; text-align: left; cursor: pointer; transform: rotate(var(--rot, 0deg)); transition: transform .35s cubic-bezier(.3,1.4,.5,1), box-shadow .2s ease, background .2s ease, color .2s ease; }
+.hcard:hover { transform: rotate(0deg) translateY(-3px); box-shadow: 0 16px 40px rgba(17,17,17,.12); }
+.hcard .mk { width: 40px; height: 40px; border-radius: 50%; background: var(--g1); display: grid; place-items: center; font-size: 20px; line-height: 1; }
+.hcard .tt { font-weight: 700; font-size: 21px; line-height: 1.1; letter-spacing: -0.01em; }
+.hcard .d { grid-column: 1 / -1; font-size: 15px; line-height: 1.45; color: var(--muted); }
+.hcard[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); transform: rotate(0deg) scale(1.03); box-shadow: 0 18px 44px rgba(17,17,17,.22); }
+.hcard[aria-pressed="true"] .mk { background: #fff; }
+.hcard[aria-pressed="true"] .d { color: #CFCFCB; }
+.hcard[aria-pressed="true"]::after { content: ""; position: absolute; top: 14px; right: 14px; width: 9px; height: 9px; border-radius: 50%; background: var(--red); }
+.tank-wrap { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.tank { --k: 1; position: relative; width: 100%; aspect-ratio: 1; border-radius: var(--r-xl); overflow: hidden; background: var(--g1); }
+.tank::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 12px #fff, inset 0 0 0 13px var(--line); pointer-events: none; z-index: 6; }
+.tank .air { position: absolute; left: 0; top: 0; right: 0; height: 12.3%; background: #fff; border-bottom: 2px solid var(--line); }
+.tank .gravel { position: absolute; inset: 0; }
+.tank .gravel i { position: absolute; border-radius: 50%; border: 3px solid var(--g1); }
+.tank .weed { position: absolute; bottom: 8%; width: 4%; transform-origin: 50% 100%; animation: weed 4.2s ease-in-out infinite; overflow: visible; }
+.tank .weed.w1 { left: 11%; height: 32%; }
+.tank .weed.w2 { left: 83%; height: 24%; animation-delay: -1.6s; }
+@keyframes weed { 0%, 100% { transform: rotate(-5deg); } 50% { transform: rotate(5deg); } }
+.tank .rig { position: absolute; left: 0; top: 0; width: 25%; aspect-ratio: 150 / 96; z-index: 2; will-change: transform; transform-origin: 50% 50%; }
+.tank .rig .tfish { position: absolute; inset: 0; width: 100%; height: auto; }
+.tank .acc { position: absolute; display: none; height: auto; overflow: visible; }
+.tank .phones { left: 1%; top: 4%; width: 40%; }
+.tank .book { left: -37%; top: 30%; width: 35%; }
+.tank .book .page { transform-box: view-box; transform-origin: 26px 20px; animation: page-flip 3s ease-in-out infinite; }
+@keyframes page-flip { 0%, 50% { transform: scaleX(1); opacity: 1; } 78% { transform: scaleX(-1); opacity: 1; } 96% { transform: scaleX(-1); opacity: 0; } 100% { transform: scaleX(1); opacity: 0; } }
+.tank .bigeye { left: 11%; top: 29.5%; width: 18%; }
+.tank .speed { left: 100%; top: 18%; width: 33%; }
+.tank[data-mode="podcasts"] .phones, .tank[data-mode="music"] .phones, .tank[data-mode="reading"] .book, .tank[data-mode="watching"] .bigeye, .tank[data-mode="running"] .speed { display: block; }
+.tk-f { position: absolute; left: 0; top: 0; z-index: 3; pointer-events: none; white-space: nowrap; will-change: transform, opacity; }
+.tk-f.note { font-size: calc(30px * var(--k)); line-height: 1; color: var(--ink); }
+.tk-f.note.red { color: var(--red); }
+.tk-f.lbl { font-size: calc(14px * var(--k)); font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+.tk-f.thought { font-size: calc(16px * var(--k)); line-height: 1; padding: calc(8px * var(--k)) calc(14px * var(--k)); border-radius: 99px; background: #fff; border: 1.5px solid var(--ink); color: var(--ink); }
+.tk-f.wave { width: calc(70px * var(--k)); height: calc(70px * var(--k)); border-radius: 50%; border: 2px solid var(--soft); border-top-color: transparent; border-bottom-color: transparent; }
+.tk-f.star { font-size: calc(30px * var(--k)); color: var(--red); line-height: 1; }
+.tk-f.cup { width: calc(56px * var(--k)); z-index: 1; }
+.tk-f.cup svg { width: 100%; height: auto; display: block; }
+.tk-f.cup .steam { opacity: 0; transition: opacity .4s ease; }
+.tk-f.cup.found .steam { opacity: 1; }
+.hob-status { min-height: 1.5em; }
+@media (max-width: 1100px) {
+  .hstage { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+  .hstage .tank-wrap { grid-column: 1 / -1; order: -1; position: sticky; top: 80px; z-index: 10; background: #fff; padding-bottom: 12px; width: 100%; }
+  .hstage .tank { width: min(440px, 100%); }
+  .hside { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  .hcard { width: 100%; transform: none; }
+}
+@media (max-width: 860px) {
+  .hstage .tank-wrap { top: 72px; gap: 12px; }
+  .hstage .tank { width: min(330px, 86vw); }
+}
+@media (max-width: 640px) {
+  .hstage { gap: 12px; }
+  .hside { gap: 12px; }
+  .hcard { padding: 12px 14px 14px; border-radius: 16px; grid-template-columns: 30px minmax(0, 1fr); gap: 6px 10px; }
+  .hcard .mk { width: 30px; height: 30px; font-size: 15px; }
+  .hcard .tt { font-size: 17px; }
+  .hcard .d { font-size: 13.5px; }
+  .hcard[aria-pressed="true"] { transform: none; }
+  .hcard[aria-pressed="true"]::after { top: 10px; right: 10px; width: 7px; height: 7px; }
+}
+
 /* ---------- responsive ---------- */
 @media (max-width: 1100px) {
   .brand .role { display: none; }
@@ -424,7 +572,7 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--soft); line-height:
   .home-nav { top: 16px; }
   .home-nav .pill-nav { background: #fff; box-shadow: 0 8px 28px rgba(17,17,17,.14); }
   .home-nav .btn.sm { box-shadow: 0 0 0 3px #fff, 0 8px 28px rgba(17,17,17,.18); }
-  .hero-text { position: relative; left: auto; right: auto; bottom: auto; max-width: none; margin-top: 412px; padding: 0 var(--pad) 64px; }
+  .hero-text { position: relative; left: auto; right: auto; bottom: auto; width: auto; margin-left: 0; max-width: none; margin-top: 412px; padding: 0 var(--pad) 64px; }
   .links { display: none; }
   .menu-btn { display: inline-flex; }
   .bar { height: 72px; }
@@ -480,6 +628,10 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--soft); line-height:
   .ghost-num { font-size: 140px; }
   .brand .bn { font-size: 18px; }
   .home-nav .pill-nav a { height: 36px; padding: 0 13px; font-size: 15px; }
+  .home-nav { right: var(--pad); }
+  .home-nav .pill-nav { max-width: 100%; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; -webkit-mask-image: linear-gradient(90deg, #000 86%, transparent); mask-image: linear-gradient(90deg, #000 86%, transparent); }
+  .home-nav .pill-nav::-webkit-scrollbar { display: none; }
+  .home-nav .pill-nav a { white-space: nowrap; flex: none; }
   .home-nav .btn.sm { height: 44px; padding: 0 18px; }
   .brand .fish { width: 30px; }
   .foot .cta h2 { font-size: 44px; }
@@ -494,14 +646,15 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--soft); line-height:
 </style>
 </head>
 <body>
-<div class="route" data-route="home" data-title="Haniye Fereidooni · UI/UX designer" hidden>
+<div class="route" data-route="home" data-title="Haniye Fereidooni · Product designer" hidden>
 
 <main class="hero">
 <div class="scales" data-d="148" data-seed="0" data-black="3"></div>
-<nav class="home-nav" aria-label="Main"><div class="pill-nav"><a href="#/work">Work</a><a href="#/about">About</a><a href="#/talks">Talks</a><a href="#resume" data-resume>Resume <span aria-hidden="true">↓</span></a></div><a class="btn sm" href="#/contact">Get in touch</a></nav>
+<nav class="home-nav" aria-label="Main"><div class="pill-nav"><a href="#/work">Work</a><a href="#/about">About</a><a class="hn-ai" href="#/ai">With AI</a><a href="#/talks">Talks</a><a class="hn-hob" href="#/hobbies">Hobbies</a><a href="#resume" data-resume>Resume <span aria-hidden="true">↓</span></a></div><a class="btn sm" href="#/contact">Get in touch</a></nav>
 <svg class="fish hero-fish" width="110" height="70" viewBox="0 0 110 70" role="img" aria-label="Red fish"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg>
-<div class="hero-text"><h1>Haniye<br>Fereidooni</h1><p>UI/UX designer for <b>complex</b> B2B platforms, research and design systems.</p>
-<a class="btn" href="#/work" style="align-self:flex-start;margin-top:10px">Selected work <span class="arrow">→</span></a></div>
+<div class="hero-text"><h1>Haniye<br>Fereidooni</h1><p>Product designer for <b>complex</b> B2B platforms, research and design systems.</p>
+<nav class="quick" aria-label="Projects"><span class="eyebrow sm">Jump to a project</span><ul><li><a href="#/greengate" data-prev="0"><span class="qn">01</span><span class="qt">Greengate</span><span class="qk">Bulk SMS platform · Case study</span><span class="qa" aria-hidden="true">→</span></a></li><li><a href="#/mobogift" data-prev="1"><span class="qn">02</span><span class="qt">Mobogift</span><span class="qk">UX research · Case study</span><span class="qa" aria-hidden="true">→</span></a></li><li><a href="#/global-sms" data-prev="2"><span class="qn">03</span><span class="qt">Global SMS</span><span class="qk">SMS platform · Showcase</span><span class="qa" aria-hidden="true">→</span></a></li><li><a href="#/elikar" data-prev="3"><span class="qn">04</span><span class="qt">Elikar</span><span class="qk">Workforce platform · UI kit</span><span class="qa" aria-hidden="true">→</span></a></li><li><a href="#/skygo" data-prev="4"><span class="qn">05</span><span class="qt">SkyGo</span><span class="qk">Flight booking app · Concept</span><span class="qa" aria-hidden="true">→</span></a></li></ul><a class="quick-all" href="#/work">See all work <span class="arrow">→</span></a></nav></div>
+<div class="qprev" aria-hidden="true"><img data-prev="0" data-img="gg-location.jpg" width="1440" height="1080" alt="" loading="lazy" decoding="async"><img data-prev="1" data-img="mg-desktop.jpg" width="1860" height="1200" alt="" loading="lazy" decoding="async"><img data-prev="2" data-img="globalsms-cover.jpg" width="1120" height="672" alt="" loading="lazy" decoding="async"><img data-prev="3" data-img="el-dashboard.jpg" width="1600" height="1619" alt="" loading="lazy" decoding="async"><img data-prev="4" data-img="sg-cover.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async"></div>
 </main>
 
 </div>
@@ -509,13 +662,13 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--soft); line-height:
 
 <header class="topbar" data-topbar>
 <div class="wrap bar">
-<a class="brand" href="#/" aria-label="Haniye Fereidooni, home"><svg class="fish " width="34" height="22" viewBox="0 0 110 70" aria-hidden="true"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg><span class="bn">Haniye Fereidooni</span><span class="role">UI/UX designer</span></a>
-<nav class="links" aria-label="Main"><div class="pill-nav"><a href="#/work" aria-current="page">Work</a><a href="#/about">About</a><a href="#/talks">Talks</a><a href="#resume" data-resume>Resume <span aria-hidden="true">↓</span></a></div><a class="btn sm" href="#/contact">Get in touch</a></nav>
+<a class="brand" href="#/" aria-label="Haniye Fereidooni, home"><svg class="fish " width="34" height="22" viewBox="0 0 110 70" aria-hidden="true"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg><span class="bn">Haniye Fereidooni</span><span class="role">Product designer</span></a>
+<nav class="links" aria-label="Main"><div class="pill-nav"><a href="#/work" aria-current="page">Work</a><a href="#/about">About</a><a href="#/ai">With AI</a><a href="#/talks">Talks</a><a href="#/hobbies">Hobbies</a><a href="#resume" data-resume>Resume <span aria-hidden="true">↓</span></a></div><a class="btn sm" href="#/contact">Get in touch</a></nav>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-work"><span class="menu-ic" aria-hidden="true"><i></i><i></i></span><span class="menu-t">Menu</span></button>
 </div>
 </header>
 <div class="menu" id="menu-work" hidden>
-<nav class="menu-links wrap" aria-label="Menu"><a href="#/work" aria-current="page"><span class="i">01</span><span class="l">Work</span></a><a href="#/about"><span class="i">02</span><span class="l">About</span></a><a href="#/talks"><span class="i">03</span><span class="l">Talks</span></a><a href="#resume" data-resume><span class="i">04</span><span class="l">Resume ↓</span></a><a href="#/contact"><span class="i">05</span><span class="l">Get in touch</span></a></nav>
+<nav class="menu-links wrap" aria-label="Menu"><a href="#/work" aria-current="page"><span class="i">01</span><span class="l">Work</span></a><a href="#/about"><span class="i">02</span><span class="l">About</span></a><a href="#/ai"><span class="i">03</span><span class="l">With AI</span></a><a href="#/talks"><span class="i">04</span><span class="l">Talks</span></a><a href="#/hobbies"><span class="i">05</span><span class="l">Hobbies</span></a><a href="#resume" data-resume><span class="i">06</span><span class="l">Resume ↓</span></a><a href="#/contact"><span class="i">07</span><span class="l">Get in touch</span></a></nav>
 <div class="wrap menu-foot"><a href="mailto:haniyefereidooni@gmail.com">Email</a><a href="https://www.linkedin.com/in/haniye-fereidooni/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/hanie-fre" target="_blank" rel="noopener">GitHub</a><a href="https://t.me/UX_With_Hani" target="_blank" rel="noopener">Telegram</a></div>
 <div class="menu-scales scales" data-d="110" data-seed="7" data-black="2"></div>
 </div>
@@ -534,7 +687,7 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--soft); line-height:
 <div class="txt">
 <div style="display:flex;align-items:center;gap:12px"><span class="num light">01</span><span class="eyebrow on-dark">Case study</span></div>
 <h3>Greengate</h3>
-<p>Redesigning a bulk SMS platform across 400+ screens as the sole UI/UX designer, from research to a 329-variable design system.</p>
+<p>Redesigning a bulk SMS platform across 400+ screens as the sole UI/UX designer, from research to a 329-variable UI kit.</p>
 <div class="kpis"><div><b>~50%</b><span>fewer support calls</span></div><div><b>7 → 11</b><span>mid and large clients</span></div><div><b>400+</b><span>screens shipped</span></div><div><b>3</b><span>live brands</span></div></div>
 <span class="cta">Read case study <span class="arrow">→</span></span>
 </div></a><a class="card-link p-mg" href="#/mobogift" data-cat="case">
@@ -580,13 +733,13 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--soft); line-height:
 
 <header class="topbar" data-topbar>
 <div class="wrap bar">
-<a class="brand" href="#/" aria-label="Haniye Fereidooni, home"><svg class="fish " width="34" height="22" viewBox="0 0 110 70" aria-hidden="true"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg><span class="bn">Haniye Fereidooni</span><span class="role">UI/UX designer</span></a>
-<nav class="links" aria-label="Main"><div class="pill-nav"><a href="#/work">Work</a><a href="#/about" aria-current="page">About</a><a href="#/talks">Talks</a><a href="#resume" data-resume>Resume <span aria-hidden="true">↓</span></a></div><a class="btn sm" href="#/contact">Get in touch</a></nav>
+<a class="brand" href="#/" aria-label="Haniye Fereidooni, home"><svg class="fish " width="34" height="22" viewBox="0 0 110 70" aria-hidden="true"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg><span class="bn">Haniye Fereidooni</span><span class="role">Product designer</span></a>
+<nav class="links" aria-label="Main"><div class="pill-nav"><a href="#/work">Work</a><a href="#/about" aria-current="page">About</a><a href="#/ai">With AI</a><a href="#/talks">Talks</a><a href="#/hobbies">Hobbies</a><a href="#resume" data-resume>Resume <span aria-hidden="true">↓</span></a></div><a class="btn sm" href="#/contact">Get in touch</a></nav>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-about"><span class="menu-ic" aria-hidden="true"><i></i><i></i></span><span class="menu-t">Menu</span></button>
 </div>
 </header>
 <div class="menu" id="menu-about" hidden>
-<nav class="menu-links wrap" aria-label="Menu"><a href="#/work"><span class="i">01</span><span class="l">Work</span></a><a href="#/about" aria-current="page"><span class="i">02</span><span class="l">About</span></a><a href="#/talks"><span class="i">03</span><span class="l">Talks</span></a><a href="#resume" data-resume><span class="i">04</span><span class="l">Resume ↓</span></a><a href="#/contact"><span class="i">05</span><span class="l">Get in touch</span></a></nav>
+<nav class="menu-links wrap" aria-label="Menu"><a href="#/work"><span class="i">01</span><span class="l">Work</span></a><a href="#/about" aria-current="page"><span class="i">02</span><span class="l">About</span></a><a href="#/ai"><span class="i">03</span><span class="l">With AI</span></a><a href="#/talks"><span class="i">04</span><span class="l">Talks</span></a><a href="#/hobbies"><span class="i">05</span><span class="l">Hobbies</span></a><a href="#resume" data-resume><span class="i">06</span><span class="l">Resume ↓</span></a><a href="#/contact"><span class="i">07</span><span class="l">Get in touch</span></a></nav>
 <div class="wrap menu-foot"><a href="mailto:haniyefereidooni@gmail.com">Email</a><a href="https://www.linkedin.com/in/haniye-fereidooni/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/hanie-fre" target="_blank" rel="noopener">GitHub</a><a href="https://t.me/UX_With_Hani" target="_blank" rel="noopener">Telegram</a></div>
 <div class="menu-scales scales" data-d="110" data-seed="7" data-black="2"></div>
 </div>
@@ -627,13 +780,13 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--soft); line-height:
 
 <header class="topbar" data-topbar>
 <div class="wrap bar">
-<a class="brand" href="#/" aria-label="Haniye Fereidooni, home"><svg class="fish " width="34" height="22" viewBox="0 0 110 70" aria-hidden="true"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg><span class="bn">Haniye Fereidooni</span><span class="role">UI/UX designer</span></a>
-<nav class="links" aria-label="Main"><div class="pill-nav"><a href="#/work">Work</a><a href="#/about">About</a><a href="#/talks">Talks</a><a href="#resume" data-resume>Resume <span aria-hidden="true">↓</span></a></div><a class="btn sm" href="#/contact" aria-current="page">Get in touch</a></nav>
+<a class="brand" href="#/" aria-label="Haniye Fereidooni, home"><svg class="fish " width="34" height="22" viewBox="0 0 110 70" aria-hidden="true"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg><span class="bn">Haniye Fereidooni</span><span class="role">Product designer</span></a>
+<nav class="links" aria-label="Main"><div class="pill-nav"><a href="#/work">Work</a><a href="#/about">About</a><a href="#/ai">With AI</a><a href="#/talks">Talks</a><a href="#/hobbies">Hobbies</a><a href="#resume" data-resume>Resume <span aria-hidden="true">↓</span></a></div><a class="btn sm" href="#/contact" aria-current="page">Get in touch</a></nav>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-contact"><span class="menu-ic" aria-hidden="true"><i></i><i></i></span><span class="menu-t">Menu</span></button>
 </div>
 </header>
 <div class="menu" id="menu-contact" hidden>
-<nav class="menu-links wrap" aria-label="Menu"><a href="#/work"><span class="i">01</span><span class="l">Work</span></a><a href="#/about"><span class="i">02</span><span class="l">About</span></a><a href="#/talks"><span class="i">03</span><span class="l">Talks</span></a><a href="#resume" data-resume><span class="i">04</span><span class="l">Resume ↓</span></a><a href="#/contact" aria-current="page"><span class="i">05</span><span class="l">Get in touch</span></a></nav>
+<nav class="menu-links wrap" aria-label="Menu"><a href="#/work"><span class="i">01</span><span class="l">Work</span></a><a href="#/about"><span class="i">02</span><span class="l">About</span></a><a href="#/ai"><span class="i">03</span><span class="l">With AI</span></a><a href="#/talks"><span class="i">04</span><span class="l">Talks</span></a><a href="#/hobbies"><span class="i">05</span><span class="l">Hobbies</span></a><a href="#resume" data-resume><span class="i">06</span><span class="l">Resume ↓</span></a><a href="#/contact" aria-current="page"><span class="i">07</span><span class="l">Get in touch</span></a></nav>
 <div class="wrap menu-foot"><a href="mailto:haniyefereidooni@gmail.com">Email</a><a href="https://www.linkedin.com/in/haniye-fereidooni/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/hanie-fre" target="_blank" rel="noopener">GitHub</a><a href="https://t.me/UX_With_Hani" target="_blank" rel="noopener">Telegram</a></div>
 <div class="menu-scales scales" data-d="110" data-seed="7" data-black="2"></div>
 </div>
@@ -669,13 +822,13 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--soft); line-height:
 
 <header class="topbar" data-topbar>
 <div class="wrap bar">
-<a class="brand" href="#/" aria-label="Haniye Fereidooni, home"><svg class="fish " width="34" height="22" viewBox="0 0 110 70" aria-hidden="true"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg><span class="bn">Haniye Fereidooni</span><span class="role">UI/UX designer</span></a>
-<nav class="links" aria-label="Main"><div class="pill-nav"><a href="#/work" aria-current="page">Work</a><a href="#/about">About</a><a href="#/talks">Talks</a><a href="#resume" data-resume>Resume <span aria-hidden="true">↓</span></a></div><a class="btn sm" href="#/contact">Get in touch</a></nav>
+<a class="brand" href="#/" aria-label="Haniye Fereidooni, home"><svg class="fish " width="34" height="22" viewBox="0 0 110 70" aria-hidden="true"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg><span class="bn">Haniye Fereidooni</span><span class="role">Product designer</span></a>
+<nav class="links" aria-label="Main"><div class="pill-nav"><a href="#/work" aria-current="page">Work</a><a href="#/about">About</a><a href="#/ai">With AI</a><a href="#/talks">Talks</a><a href="#/hobbies">Hobbies</a><a href="#resume" data-resume>Resume <span aria-hidden="true">↓</span></a></div><a class="btn sm" href="#/contact">Get in touch</a></nav>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-greengate"><span class="menu-ic" aria-hidden="true"><i></i><i></i></span><span class="menu-t">Menu</span></button>
 </div>
 </header>
 <div class="menu" id="menu-greengate" hidden>
-<nav class="menu-links wrap" aria-label="Menu"><a href="#/work" aria-current="page"><span class="i">01</span><span class="l">Work</span></a><a href="#/about"><span class="i">02</span><span class="l">About</span></a><a href="#/talks"><span class="i">03</span><span class="l">Talks</span></a><a href="#resume" data-resume><span class="i">04</span><span class="l">Resume ↓</span></a><a href="#/contact"><span class="i">05</span><span class="l">Get in touch</span></a></nav>
+<nav class="menu-links wrap" aria-label="Menu"><a href="#/work" aria-current="page"><span class="i">01</span><span class="l">Work</span></a><a href="#/about"><span class="i">02</span><span class="l">About</span></a><a href="#/ai"><span class="i">03</span><span class="l">With AI</span></a><a href="#/talks"><span class="i">04</span><span class="l">Talks</span></a><a href="#/hobbies"><span class="i">05</span><span class="l">Hobbies</span></a><a href="#resume" data-resume><span class="i">06</span><span class="l">Resume ↓</span></a><a href="#/contact"><span class="i">07</span><span class="l">Get in touch</span></a></nav>
 <div class="wrap menu-foot"><a href="mailto:haniyefereidooni@gmail.com">Email</a><a href="https://www.linkedin.com/in/haniye-fereidooni/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/hanie-fre" target="_blank" rel="noopener">GitHub</a><a href="https://t.me/UX_With_Hani" target="_blank" rel="noopener">Telegram</a></div>
 <div class="menu-scales scales" data-d="110" data-seed="7" data-black="2"></div>
 </div>
@@ -687,6 +840,7 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--soft); line-height:
 <div class="lede-row"><p class="lede">Redesigning a bulk SMS platform across 400+ screens, desktop and mobile, as the sole UI/UX designer.</p></div>
 <div class="meta"><div><span class="eyebrow sm">Role</span><span>Sole UI/UX designer</span></div><div><span class="eyebrow sm">Team</span><span>Me and 3 developers</span></div><div><span class="eyebrow sm">Timeline</span><span>4 months</span></div><div><span class="eyebrow sm">Also live as</span><span>sms.fanap, sms.iran</span></div></div>
 </section>
+<section class="wrap"><div class="tldr"><span class="tl-k">In 30 seconds</span><div class="tl-cols"><div><span class="eyebrow sm">The problem</span><p>Users couldn&#x27;t finish basic tasks alone. Support carried the load, customers churned and larger clients stayed away.</p></div><div><span class="eyebrow sm">What I did</span><p>Researched with session recordings, 15 interviews and support data, then redesigned 400+ screens on one UI kit, around the points where people got stuck.</p></div><div><span class="eyebrow sm">The result</span><p>About 50% fewer support calls, mid and large clients up from 7 to 11, three live brands on the same design, and a renewed government contract.</p></div></div></div></section>
 <section class="wrap mt-l"><div class="shot xl dark" style="position:relative;aspect-ratio:1280/640">
 <img data-img="gg-location.jpg" width="1440" height="1080" alt="Greengate location-based SMS wizard" loading="eager" decoding="async" style="position:absolute;left:9.4%;top:10.9%;width:64%;height:96%;object-fit:cover;object-position:top right;border-radius:14px">
 <div class="phone" style="position:absolute;left:68.7%;top:23.4%;width:19.5%;aspect-ratio:250/520;height:auto"><img data-img="gg-mobile.png" width="360" height="1274" alt="Greengate on mobile" loading="eager" decoding="async"></div>
@@ -763,7 +917,7 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--soft); line-height:
 </section>
 
 <section class="wrap sec">
-<div class="head-split"><div class="l"><span class="eyebrow">07 — Design system</span><h2 class="h2">329 variables, one language</h2></div>
+<div class="head-split"><div class="l"><span class="eyebrow">07 — UI kit</span><h2 class="h2">329 variables, one language</h2></div>
 <div class="r stack gap-m"><p class="body-l">The visual language runs on Figma variables in four collections. Mapped tokens give every color a job, and the responsive collection switches the type scale between desktop and mobile.</p>
 <div class="pills"><span class="pill">Brand · 106</span><span class="pill">Alias · 89</span><span class="pill">Mapped · 68</span><span class="pill">Responsive · 66</span></div></div></div>
 <div class="g2 mt-l">
@@ -817,13 +971,13 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--soft); line-height:
 
 <header class="topbar" data-topbar>
 <div class="wrap bar">
-<a class="brand" href="#/" aria-label="Haniye Fereidooni, home"><svg class="fish " width="34" height="22" viewBox="0 0 110 70" aria-hidden="true"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg><span class="bn">Haniye Fereidooni</span><span class="role">UI/UX designer</span></a>
-<nav class="links" aria-label="Main"><div class="pill-nav"><a href="#/work" aria-current="page">Work</a><a href="#/about">About</a><a href="#/talks">Talks</a><a href="#resume" data-resume>Resume <span aria-hidden="true">↓</span></a></div><a class="btn sm" href="#/contact">Get in touch</a></nav>
+<a class="brand" href="#/" aria-label="Haniye Fereidooni, home"><svg class="fish " width="34" height="22" viewBox="0 0 110 70" aria-hidden="true"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg><span class="bn">Haniye Fereidooni</span><span class="role">Product designer</span></a>
+<nav class="links" aria-label="Main"><div class="pill-nav"><a href="#/work" aria-current="page">Work</a><a href="#/about">About</a><a href="#/ai">With AI</a><a href="#/talks">Talks</a><a href="#/hobbies">Hobbies</a><a href="#resume" data-resume>Resume <span aria-hidden="true">↓</span></a></div><a class="btn sm" href="#/contact">Get in touch</a></nav>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-mobogift"><span class="menu-ic" aria-hidden="true"><i></i><i></i></span><span class="menu-t">Menu</span></button>
 </div>
 </header>
 <div class="menu" id="menu-mobogift" hidden>
-<nav class="menu-links wrap" aria-label="Menu"><a href="#/work" aria-current="page"><span class="i">01</span><span class="l">Work</span></a><a href="#/about"><span class="i">02</span><span class="l">About</span></a><a href="#/talks"><span class="i">03</span><span class="l">Talks</span></a><a href="#resume" data-resume><span class="i">04</span><span class="l">Resume ↓</span></a><a href="#/contact"><span class="i">05</span><span class="l">Get in touch</span></a></nav>
+<nav class="menu-links wrap" aria-label="Menu"><a href="#/work" aria-current="page"><span class="i">01</span><span class="l">Work</span></a><a href="#/about"><span class="i">02</span><span class="l">About</span></a><a href="#/ai"><span class="i">03</span><span class="l">With AI</span></a><a href="#/talks"><span class="i">04</span><span class="l">Talks</span></a><a href="#/hobbies"><span class="i">05</span><span class="l">Hobbies</span></a><a href="#resume" data-resume><span class="i">06</span><span class="l">Resume ↓</span></a><a href="#/contact"><span class="i">07</span><span class="l">Get in touch</span></a></nav>
 <div class="wrap menu-foot"><a href="mailto:haniyefereidooni@gmail.com">Email</a><a href="https://www.linkedin.com/in/haniye-fereidooni/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/hanie-fre" target="_blank" rel="noopener">GitHub</a><a href="https://t.me/UX_With_Hani" target="_blank" rel="noopener">Telegram</a></div>
 <div class="menu-scales scales" data-d="110" data-seed="7" data-black="2"></div>
 </div>
@@ -835,6 +989,7 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--soft); line-height:
 <div class="lede-row"><p class="lede">Finding where buyers silently drop off, from first visit to payment, in a digital gift-card store.</p></div>
 <div class="meta"><div><span class="eyebrow sm">Role</span><span>UX researcher</span></div><div><span class="eyebrow sm">Duration</span><span>1 month</span></div><div><span class="eyebrow sm">Product</span><span>Digital gift cards, instant delivery</span></div><div><span class="eyebrow sm">Outcome</span><span>Findings handed to the design phase</span></div></div>
 </section>
+<section class="wrap"><div class="tldr"><span class="tl-k">In 30 seconds</span><div class="tl-cols"><div><span class="eyebrow sm">The problem</span><p>Buyers in a digital gift-card store dropped off between landing and payment, and nobody knew where or why.</p></div><div><span class="eyebrow sm">What I did</span><p>Combined Clarity analytics, session video coding, a heuristic evaluation and usability testing to find each barrier and how often it appeared.</p></div><div><span class="eyebrow sm">The result</span><p>Three quiet walls: a login gate only 448 of 934 got through, hidden out-of-stock amounts, and a coupon that fails silently. The findings went straight into design.</p></div></div></div></section>
 <section class="wrap mt-l"><div class="shot xl" style="position:relative;aspect-ratio:1280/680;background:var(--g1)">
 <div class="browser" style="position:absolute;left:6%;top:10%;width:64%"><div class="bar"><i></i><i></i><i></i></div><img data-img="mg-desktop.jpg" width="1860" height="1200" alt="Mobogift home page on desktop" loading="eager" decoding="async"></div>
 <div class="phone" style="position:absolute;left:73.5%;top:11%;width:19.5%"><img data-img="mg-mobile.jpg" width="540" height="1164" alt="Mobogift product page on mobile" loading="eager" decoding="async"></div>
@@ -912,13 +1067,13 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--soft); line-height:
 
 <header class="topbar" data-topbar>
 <div class="wrap bar">
-<a class="brand" href="#/" aria-label="Haniye Fereidooni, home"><svg class="fish " width="34" height="22" viewBox="0 0 110 70" aria-hidden="true"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg><span class="bn">Haniye Fereidooni</span><span class="role">UI/UX designer</span></a>
-<nav class="links" aria-label="Main"><div class="pill-nav"><a href="#/work" aria-current="page">Work</a><a href="#/about">About</a><a href="#/talks">Talks</a><a href="#resume" data-resume>Resume <span aria-hidden="true">↓</span></a></div><a class="btn sm" href="#/contact">Get in touch</a></nav>
+<a class="brand" href="#/" aria-label="Haniye Fereidooni, home"><svg class="fish " width="34" height="22" viewBox="0 0 110 70" aria-hidden="true"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg><span class="bn">Haniye Fereidooni</span><span class="role">Product designer</span></a>
+<nav class="links" aria-label="Main"><div class="pill-nav"><a href="#/work" aria-current="page">Work</a><a href="#/about">About</a><a href="#/ai">With AI</a><a href="#/talks">Talks</a><a href="#/hobbies">Hobbies</a><a href="#resume" data-resume>Resume <span aria-hidden="true">↓</span></a></div><a class="btn sm" href="#/contact">Get in touch</a></nav>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-global-sms"><span class="menu-ic" aria-hidden="true"><i></i><i></i></span><span class="menu-t">Menu</span></button>
 </div>
 </header>
 <div class="menu" id="menu-global-sms" hidden>
-<nav class="menu-links wrap" aria-label="Menu"><a href="#/work" aria-current="page"><span class="i">01</span><span class="l">Work</span></a><a href="#/about"><span class="i">02</span><span class="l">About</span></a><a href="#/talks"><span class="i">03</span><span class="l">Talks</span></a><a href="#resume" data-resume><span class="i">04</span><span class="l">Resume ↓</span></a><a href="#/contact"><span class="i">05</span><span class="l">Get in touch</span></a></nav>
+<nav class="menu-links wrap" aria-label="Menu"><a href="#/work" aria-current="page"><span class="i">01</span><span class="l">Work</span></a><a href="#/about"><span class="i">02</span><span class="l">About</span></a><a href="#/ai"><span class="i">03</span><span class="l">With AI</span></a><a href="#/talks"><span class="i">04</span><span class="l">Talks</span></a><a href="#/hobbies"><span class="i">05</span><span class="l">Hobbies</span></a><a href="#resume" data-resume><span class="i">06</span><span class="l">Resume ↓</span></a><a href="#/contact"><span class="i">07</span><span class="l">Get in touch</span></a></nav>
 <div class="wrap menu-foot"><a href="mailto:haniyefereidooni@gmail.com">Email</a><a href="https://www.linkedin.com/in/haniye-fereidooni/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/hanie-fre" target="_blank" rel="noopener">GitHub</a><a href="https://t.me/UX_With_Hani" target="_blank" rel="noopener">Telegram</a></div>
 <div class="menu-scales scales" data-d="110" data-seed="7" data-black="2"></div>
 </div>
@@ -930,6 +1085,7 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--soft); line-height:
 <div class="lede-row"><p class="lede">An English-language SMS platform for international businesses sending messages into Iran, designed from scratch.</p></div>
 <div class="meta"><div><span class="eyebrow sm">Role</span><span>Sole UI/UX designer</span></div><div><span class="eyebrow sm">Team</span><span>Me and 3 developers</span></div><div><span class="eyebrow sm">Duration</span><span>3 months</span></div><div><span class="eyebrow sm">Platforms</span><span>Desktop and mobile, light and dark</span></div></div>
 </section>
+<section class="wrap"><div class="tldr"><span class="tl-k">In 30 seconds</span><div class="tl-cols"><div><span class="eyebrow sm">The problem</span><p>International businesses needed to send SMS into Iran, with no local product to learn from and reviews that run country by country.</p></div><div><span class="eyebrow sm">What I did</span><p>Designed the platform from scratch as the sole UI/UX designer, building on Untitled UI and customizing it into the product’s own system.</p></div><div><span class="eyebrow sm">Key decisions</span><p>A record per country for every Sender ID, documents uploaded once, and the same flows on desktop and mobile, in light and dark.</p></div></div></div></section>
 <section class="wrap mt-l">
 <div class="shot xl bordered white crop" style="aspect-ratio:1280/760"><img data-img="gsms-reporting.jpg" width="1441" height="2343" alt="Global SMS reports and analytics" loading="eager" decoding="async"></div>
 <div class="g2 mt-m">
@@ -987,13 +1143,13 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--soft); line-height:
 
 <header class="topbar" data-topbar>
 <div class="wrap bar">
-<a class="brand" href="#/" aria-label="Haniye Fereidooni, home"><svg class="fish " width="34" height="22" viewBox="0 0 110 70" aria-hidden="true"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg><span class="bn">Haniye Fereidooni</span><span class="role">UI/UX designer</span></a>
-<nav class="links" aria-label="Main"><div class="pill-nav"><a href="#/work" aria-current="page">Work</a><a href="#/about">About</a><a href="#/talks">Talks</a><a href="#resume" data-resume>Resume <span aria-hidden="true">↓</span></a></div><a class="btn sm" href="#/contact">Get in touch</a></nav>
+<a class="brand" href="#/" aria-label="Haniye Fereidooni, home"><svg class="fish " width="34" height="22" viewBox="0 0 110 70" aria-hidden="true"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg><span class="bn">Haniye Fereidooni</span><span class="role">Product designer</span></a>
+<nav class="links" aria-label="Main"><div class="pill-nav"><a href="#/work" aria-current="page">Work</a><a href="#/about">About</a><a href="#/ai">With AI</a><a href="#/talks">Talks</a><a href="#/hobbies">Hobbies</a><a href="#resume" data-resume>Resume <span aria-hidden="true">↓</span></a></div><a class="btn sm" href="#/contact">Get in touch</a></nav>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-elikar"><span class="menu-ic" aria-hidden="true"><i></i><i></i></span><span class="menu-t">Menu</span></button>
 </div>
 </header>
 <div class="menu" id="menu-elikar" hidden>
-<nav class="menu-links wrap" aria-label="Menu"><a href="#/work" aria-current="page"><span class="i">01</span><span class="l">Work</span></a><a href="#/about"><span class="i">02</span><span class="l">About</span></a><a href="#/talks"><span class="i">03</span><span class="l">Talks</span></a><a href="#resume" data-resume><span class="i">04</span><span class="l">Resume ↓</span></a><a href="#/contact"><span class="i">05</span><span class="l">Get in touch</span></a></nav>
+<nav class="menu-links wrap" aria-label="Menu"><a href="#/work" aria-current="page"><span class="i">01</span><span class="l">Work</span></a><a href="#/about"><span class="i">02</span><span class="l">About</span></a><a href="#/ai"><span class="i">03</span><span class="l">With AI</span></a><a href="#/talks"><span class="i">04</span><span class="l">Talks</span></a><a href="#/hobbies"><span class="i">05</span><span class="l">Hobbies</span></a><a href="#resume" data-resume><span class="i">06</span><span class="l">Resume ↓</span></a><a href="#/contact"><span class="i">07</span><span class="l">Get in touch</span></a></nav>
 <div class="wrap menu-foot"><a href="mailto:haniyefereidooni@gmail.com">Email</a><a href="https://www.linkedin.com/in/haniye-fereidooni/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/hanie-fre" target="_blank" rel="noopener">GitHub</a><a href="https://t.me/UX_With_Hani" target="_blank" rel="noopener">Telegram</a></div>
 <div class="menu-scales scales" data-d="110" data-seed="7" data-black="2"></div>
 </div>
@@ -1005,6 +1161,7 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--soft); line-height:
 <div class="lede-row"><p class="lede">A workforce management platform that helps companies run contracts, staff, workshops, time cards and payslips in one place.</p><a class="btn" href="https://elikar.ir" target="_blank" rel="noopener">Visit live site ↗</a></div>
 <div class="meta"><div><span class="eyebrow sm">Role</span><span>UI/UX designer, team of 2 designers</span></div><div><span class="eyebrow sm">Duration</span><span>3 months</span></div><div><span class="eyebrow sm">Scope</span><span>230 screens and a UI kit</span></div><div><span class="eyebrow sm">Platforms</span><span>Desktop, light and dark</span></div></div>
 </section>
+<section class="wrap"><div class="tldr"><span class="tl-k">In 30 seconds</span><div class="tl-cols"><div><span class="eyebrow sm">The problem</span><p>Contracts, staff, workshops, time cards and payslips in one platform, used every day by people who aren’t always comfortable with software.</p></div><div><span class="eyebrow sm">What I did</span><p>Designed it with a second designer and built a right-to-left UI kit from scratch, so every screen speaks the same language.</p></div><div><span class="eyebrow sm">The result</span><p>230 screens in light and dark, live at elikar.ir.</p></div></div></div></section>
 <section class="wrap mt-l"><div class="shot xl bordered crop" style="aspect-ratio:1280/880"><img data-img="el-dashboard.jpg" width="1600" height="1619" alt="Elikar dashboard" loading="eager" decoding="async"></div></section>
 
 <section class="wrap sec"><div class="g12 align-center">
@@ -1070,13 +1227,13 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--soft); line-height:
 
 <header class="topbar" data-topbar>
 <div class="wrap bar">
-<a class="brand" href="#/" aria-label="Haniye Fereidooni, home"><svg class="fish " width="34" height="22" viewBox="0 0 110 70" aria-hidden="true"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg><span class="bn">Haniye Fereidooni</span><span class="role">UI/UX designer</span></a>
-<nav class="links" aria-label="Main"><div class="pill-nav"><a href="#/work" aria-current="page">Work</a><a href="#/about">About</a><a href="#/talks">Talks</a><a href="#resume" data-resume>Resume <span aria-hidden="true">↓</span></a></div><a class="btn sm" href="#/contact">Get in touch</a></nav>
+<a class="brand" href="#/" aria-label="Haniye Fereidooni, home"><svg class="fish " width="34" height="22" viewBox="0 0 110 70" aria-hidden="true"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg><span class="bn">Haniye Fereidooni</span><span class="role">Product designer</span></a>
+<nav class="links" aria-label="Main"><div class="pill-nav"><a href="#/work" aria-current="page">Work</a><a href="#/about">About</a><a href="#/ai">With AI</a><a href="#/talks">Talks</a><a href="#/hobbies">Hobbies</a><a href="#resume" data-resume>Resume <span aria-hidden="true">↓</span></a></div><a class="btn sm" href="#/contact">Get in touch</a></nav>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-skygo"><span class="menu-ic" aria-hidden="true"><i></i><i></i></span><span class="menu-t">Menu</span></button>
 </div>
 </header>
 <div class="menu" id="menu-skygo" hidden>
-<nav class="menu-links wrap" aria-label="Menu"><a href="#/work" aria-current="page"><span class="i">01</span><span class="l">Work</span></a><a href="#/about"><span class="i">02</span><span class="l">About</span></a><a href="#/talks"><span class="i">03</span><span class="l">Talks</span></a><a href="#resume" data-resume><span class="i">04</span><span class="l">Resume ↓</span></a><a href="#/contact"><span class="i">05</span><span class="l">Get in touch</span></a></nav>
+<nav class="menu-links wrap" aria-label="Menu"><a href="#/work" aria-current="page"><span class="i">01</span><span class="l">Work</span></a><a href="#/about"><span class="i">02</span><span class="l">About</span></a><a href="#/ai"><span class="i">03</span><span class="l">With AI</span></a><a href="#/talks"><span class="i">04</span><span class="l">Talks</span></a><a href="#/hobbies"><span class="i">05</span><span class="l">Hobbies</span></a><a href="#resume" data-resume><span class="i">06</span><span class="l">Resume ↓</span></a><a href="#/contact"><span class="i">07</span><span class="l">Get in touch</span></a></nav>
 <div class="wrap menu-foot"><a href="mailto:haniyefereidooni@gmail.com">Email</a><a href="https://www.linkedin.com/in/haniye-fereidooni/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/hanie-fre" target="_blank" rel="noopener">GitHub</a><a href="https://t.me/UX_With_Hani" target="_blank" rel="noopener">Telegram</a></div>
 <div class="menu-scales scales" data-d="110" data-seed="7" data-black="2"></div>
 </div>
@@ -1088,6 +1245,7 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--soft); line-height:
 <div class="lede-row"><p class="lede">A flight-ticket app concept, from search to boarding pass, designed as a team of five and shared free on Figma Community.</p><a class="btn" href="https://www.figma.com/community/file/1439586706170868286" target="_blank" rel="noopener">Open in Figma Community ↗</a></div>
 <div class="meta"><div><span class="eyebrow sm">Type</span><span>Concept, team project</span></div><div><span class="eyebrow sm">Team</span><span>5 designers, 2 mentors</span></div><div><span class="eyebrow sm">My focus</span><span>Problem solving and prototyping</span></div><div><span class="eyebrow sm">Platform</span><span>Mobile app, Android</span></div></div>
 </section>
+<section class="wrap"><div class="tldr"><span class="tl-k">In 30 seconds</span><div class="tl-cols"><div><span class="eyebrow sm">The problem</span><p>A flight-ticket app concept: make booking, from search to boarding pass, feel simple on a phone.</p></div><div><span class="eyebrow sm">What I did</span><p>Worked across the whole team project, focusing on problem solving and the clickable prototype.</p></div><div><span class="eyebrow sm">The result</span><p>66 screens and 100+ components, shared free on Figma Community.</p></div></div></div></section>
 <section class="wrap mt-l"><div class="shot xl bordered"><img data-img="sg-cover.jpg" width="1920" height="1080" alt="SkyGo cover: flight search and seat selection" loading="eager" decoding="async"></div></section>
 
 <section class="wrap sec-s"><div class="g4"><div class="stat"><span class="n">66</span><span class="t">Screens</span></div><div class="stat"><span class="n">100+</span><span class="t">Components</span></div><div class="stat"><span class="n">Auto</span><span class="t">Layout on every component</span></div><div class="stat"><span class="n">Proto</span><span class="t">Clickable prototype</span></div></div></section>
@@ -1142,13 +1300,13 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--soft); line-height:
 
 <header class="topbar" data-topbar>
 <div class="wrap bar">
-<a class="brand" href="#/" aria-label="Haniye Fereidooni, home"><svg class="fish " width="34" height="22" viewBox="0 0 110 70" aria-hidden="true"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg><span class="bn">Haniye Fereidooni</span><span class="role">UI/UX designer</span></a>
-<nav class="links" aria-label="Main"><div class="pill-nav"><a href="#/work">Work</a><a href="#/about">About</a><a href="#/talks" aria-current="page">Talks</a><a href="#resume" data-resume>Resume <span aria-hidden="true">↓</span></a></div><a class="btn sm" href="#/contact">Get in touch</a></nav>
+<a class="brand" href="#/" aria-label="Haniye Fereidooni, home"><svg class="fish " width="34" height="22" viewBox="0 0 110 70" aria-hidden="true"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg><span class="bn">Haniye Fereidooni</span><span class="role">Product designer</span></a>
+<nav class="links" aria-label="Main"><div class="pill-nav"><a href="#/work">Work</a><a href="#/about">About</a><a href="#/ai">With AI</a><a href="#/talks" aria-current="page">Talks</a><a href="#/hobbies">Hobbies</a><a href="#resume" data-resume>Resume <span aria-hidden="true">↓</span></a></div><a class="btn sm" href="#/contact">Get in touch</a></nav>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-talks"><span class="menu-ic" aria-hidden="true"><i></i><i></i></span><span class="menu-t">Menu</span></button>
 </div>
 </header>
 <div class="menu" id="menu-talks" hidden>
-<nav class="menu-links wrap" aria-label="Menu"><a href="#/work"><span class="i">01</span><span class="l">Work</span></a><a href="#/about"><span class="i">02</span><span class="l">About</span></a><a href="#/talks" aria-current="page"><span class="i">03</span><span class="l">Talks</span></a><a href="#resume" data-resume><span class="i">04</span><span class="l">Resume ↓</span></a><a href="#/contact"><span class="i">05</span><span class="l">Get in touch</span></a></nav>
+<nav class="menu-links wrap" aria-label="Menu"><a href="#/work"><span class="i">01</span><span class="l">Work</span></a><a href="#/about"><span class="i">02</span><span class="l">About</span></a><a href="#/ai"><span class="i">03</span><span class="l">With AI</span></a><a href="#/talks" aria-current="page"><span class="i">04</span><span class="l">Talks</span></a><a href="#/hobbies"><span class="i">05</span><span class="l">Hobbies</span></a><a href="#resume" data-resume><span class="i">06</span><span class="l">Resume ↓</span></a><a href="#/contact"><span class="i">07</span><span class="l">Get in touch</span></a></nav>
 <div class="wrap menu-foot"><a href="mailto:haniyefereidooni@gmail.com">Email</a><a href="https://www.linkedin.com/in/haniye-fereidooni/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/hanie-fre" target="_blank" rel="noopener">GitHub</a><a href="https://t.me/UX_With_Hani" target="_blank" rel="noopener">Telegram</a></div>
 <div class="menu-scales scales" data-d="110" data-seed="7" data-black="2"></div>
 </div>
@@ -1161,7 +1319,7 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--soft); line-height:
 <section class="wrap mt-l"><article class="talk">
 <div class="talk-poster"><img data-img="talk-vibe-coding.jpg" width="1078" height="1191" alt="Workshop poster: Vibe coding for product designers and product managers, from idea to product with AI" loading="eager" decoding="async"></div>
 <div class="talk-body">
-<div class="pills"><span class="chip num-chip">01</span><span class="chip">Workshop</span><span class="chip">Vibe coding</span><span class="chip up-chip" data-until="2026-10-02">Upcoming</span></div>
+<div class="pills"><span class="chip num-chip">01</span><span class="chip">Workshop</span><span class="chip">Vibe coding</span></div>
 <h2 class="h2">Vibe Coding for Designers and PMs</h2>
 <p class="lede" style="font-size:clamp(20px,1.8vw,26px)">From idea to product, with AI.</p>
 <p class="body-l">The product manager’s and product designer’s job isn’t what it used to be. For years, the product team defined the problem, wrote the PRD and handed the work to engineering.</p><p class="body-l">With AI, that line is moving. Product people can now build, test and turn a real part of the product into a working prototype themselves, with far less dependence on engineering. This two-day workshop is about practicing that new way of working, hands-on.</p>
@@ -1195,6 +1353,125 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--soft); line-height:
 </article>
 <div class="panel-dark talk-quote"><p class="quote">We don’t design the world. We design how it’s understood.</p></div>
 </section>
+</main>
+<section class="foot" aria-label="Contact">
+<div class="scales" data-d="148" data-seed="3" data-black="2"></div>
+<div class="wrap"><div class="cta">
+<h2>Let's talk<svg class="fish drift" width="80" height="51" viewBox="0 0 110 70" aria-hidden="true"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg></h2>
+<p>Got a complex product? I'd love to hear about it.</p>
+<a class="btn" href="#/contact" style="align-self:flex-start">Get in touch</a>
+</div></div>
+</section><footer class="foot-bar"><div class="wrap">
+<span>© <span data-year>2026</span> Haniye Fereidooni · UI/UX designer</span>
+<nav aria-label="Elsewhere"><a href="mailto:haniyefereidooni@gmail.com">Email</a><a href="https://www.linkedin.com/in/haniye-fereidooni/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/hanie-fre" target="_blank" rel="noopener">GitHub</a><a href="https://t.me/UX_With_Hani" target="_blank" rel="noopener">Telegram</a></nav>
+</div></footer>
+
+</div>
+<div class="route" data-route="hobbies" data-title="Hobbies · Haniye Fereidooni" hidden>
+
+<header class="topbar" data-topbar>
+<div class="wrap bar">
+<a class="brand" href="#/" aria-label="Haniye Fereidooni, home"><svg class="fish " width="34" height="22" viewBox="0 0 110 70" aria-hidden="true"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg><span class="bn">Haniye Fereidooni</span><span class="role">Product designer</span></a>
+<nav class="links" aria-label="Main"><div class="pill-nav"><a href="#/work">Work</a><a href="#/about">About</a><a href="#/ai">With AI</a><a href="#/talks">Talks</a><a href="#/hobbies" aria-current="page">Hobbies</a><a href="#resume" data-resume>Resume <span aria-hidden="true">↓</span></a></div><a class="btn sm" href="#/contact">Get in touch</a></nav>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-hobbies"><span class="menu-ic" aria-hidden="true"><i></i><i></i></span><span class="menu-t">Menu</span></button>
+</div>
+</header>
+<div class="menu" id="menu-hobbies" hidden>
+<nav class="menu-links wrap" aria-label="Menu"><a href="#/work"><span class="i">01</span><span class="l">Work</span></a><a href="#/about"><span class="i">02</span><span class="l">About</span></a><a href="#/ai"><span class="i">03</span><span class="l">With AI</span></a><a href="#/talks"><span class="i">04</span><span class="l">Talks</span></a><a href="#/hobbies" aria-current="page"><span class="i">05</span><span class="l">Hobbies</span></a><a href="#resume" data-resume><span class="i">06</span><span class="l">Resume ↓</span></a><a href="#/contact"><span class="i">07</span><span class="l">Get in touch</span></a></nav>
+<div class="wrap menu-foot"><a href="mailto:haniyefereidooni@gmail.com">Email</a><a href="https://www.linkedin.com/in/haniye-fereidooni/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/hanie-fre" target="_blank" rel="noopener">GitHub</a><a href="https://t.me/UX_With_Hani" target="_blank" rel="noopener">Telegram</a></div>
+<div class="menu-scales scales" data-d="110" data-seed="7" data-black="2"></div>
+</div>
+<main>
+<section class="wrap">
+<div class="contact-top hob-top">
+<span class="eyebrow">My hobbies</span>
+<h1>Off the clock<span class="red">.</span></h1>
+<p>Pick a hobby and watch my fish do it.</p>
+</div>
+<div class="hstage">
+<div class="hside"><button class="hcard" type="button" data-hobby="running" aria-pressed="false" style="--rot:-2deg"><span class="mk" aria-hidden="true">🏃</span><span class="tt">Running</span><span class="d">My favorite way to overthink less and breathe more.</span></button><button class="hcard" type="button" data-hobby="yoga" aria-pressed="false" style="--rot:1.5deg"><span class="mk" aria-hidden="true">🧘</span><span class="tt">Yoga &amp; Pilates</span><span class="d">Keeping my body moving while trying to keep my brain quiet.</span></button><button class="hcard" type="button" data-hobby="reading" aria-pressed="false" style="--rot:-1deg"><span class="mk" aria-hidden="true">📚</span><span class="tt">Reading</span><span class="d">Mostly about psychology, human behavior, decision-making, and why we do the weird things we do.</span></button><button class="hcard" type="button" data-hobby="podcasts" aria-pressed="false" style="--rot:2deg"><span class="mk" aria-hidden="true">🎙️</span><span class="tt">Podcasts</span><span class="d">My favorite way to learn something new while doing absolutely anything else.</span></button></div>
+<div class="tank-wrap">
+<div class="tank" role="img" aria-label="An aquarium with a red fish, swimming around and waiting for you to pick a hobby.">
+<div class="air"></div><svg class="weed w1" viewBox="0 0 24 120" preserveAspectRatio="none" aria-hidden="true"><path d="M12 120 C2 96 22 80 12 60 S2 26 12 4" fill="none" stroke="#D0D0CD" stroke-width="5" stroke-linecap="round"/></svg><svg class="weed w2" viewBox="0 0 24 120" preserveAspectRatio="none" aria-hidden="true"><path d="M12 120 C22 98 2 82 12 62 S22 30 12 10" fill="none" stroke="#D0D0CD" stroke-width="5" stroke-linecap="round"/></svg><div class="gravel"></div>
+<div class="rig" aria-hidden="true"><svg class="fish tfish" width="150" height="95" viewBox="0 0 110 70" aria-hidden="true"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg><svg class="acc phones" viewBox="0 0 60 46"><path d="M9 34 A21 21 0 0 1 51 34" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round"/><rect x="3" y="28" width="13" height="17" rx="5" fill="#111111"/><rect x="44" y="28" width="13" height="17" rx="5" fill="#111111"/></svg><svg class="acc book" viewBox="0 0 52 38"><path d="M26 7 Q14 1 3 5 V33 Q14 29 26 35 Z" fill="#ffffff" stroke="#111111" stroke-width="2.4" stroke-linejoin="round"/><path d="M26 7 Q38 1 49 5 V33 Q38 29 26 35 Z" fill="#ffffff" stroke="#111111" stroke-width="2.4" stroke-linejoin="round"/><path class="page" d="M26 7 Q38 1 49 5 V33 Q38 29 26 35 Z" fill="#F4F4F3" stroke="#111111" stroke-width="2"/><path d="M9 13 H20 M9 19 H20 M9 25 H17" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round"/></svg><svg class="acc bigeye" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="#ffffff" stroke="#111111" stroke-width="1.5"/><circle class="pupil" cx="12" cy="12" r="5" fill="#111111"/></svg><svg class="acc speed" viewBox="0 0 50 50"><path d="M6 14 H40 M14 25 H48 M6 36 H36" stroke="#111111" stroke-width="3" stroke-linecap="round"/></svg></div>
+</div>
+<p class="fed hob-status" aria-live="polite">Pick a hobby on either side</p>
+</div>
+<div class="hside"><button class="hcard" type="button" data-hobby="music" aria-pressed="false" style="--rot:1.5deg"><span class="mk" aria-hidden="true">🎧</span><span class="tt">Music</span><span class="d">I don’t just listen to music. I build a soundtrack for almost every mood.</span></button><button class="hcard" type="button" data-hobby="cafe" aria-pressed="false" style="--rot:-2deg"><span class="mk" aria-hidden="true">☕️</span><span class="tt">Café Hunting</span><span class="d">Finding a good café is basically a tiny side quest I take way too seriously.</span></button><button class="hcard" type="button" data-hobby="watching" aria-pressed="false" style="--rot:1deg"><span class="mk" aria-hidden="true">👀</span><span class="tt">People Watching</span><span class="d">Probably the most UX-researcher thing about me.</span></button><button class="hcard" type="button" data-hobby="overthinking" aria-pressed="false" style="--rot:-1.5deg"><span class="mk" aria-hidden="true">🧠</span><span class="tt">Overthinking</span><span class="d">Still working on turning it into a useful design skill.</span></button></div>
+</div>
+</section>
+</main>
+<section class="foot" aria-label="Contact">
+<div class="scales" data-d="148" data-seed="3" data-black="2"></div>
+<div class="wrap"><div class="cta">
+<h2>Let's talk<svg class="fish drift" width="80" height="51" viewBox="0 0 110 70" aria-hidden="true"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg></h2>
+<p>Got a complex product? I'd love to hear about it.</p>
+<a class="btn" href="#/contact" style="align-self:flex-start">Get in touch</a>
+</div></div>
+</section><footer class="foot-bar"><div class="wrap">
+<span>© <span data-year>2026</span> Haniye Fereidooni · UI/UX designer</span>
+<nav aria-label="Elsewhere"><a href="mailto:haniyefereidooni@gmail.com">Email</a><a href="https://www.linkedin.com/in/haniye-fereidooni/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/hanie-fre" target="_blank" rel="noopener">GitHub</a><a href="https://t.me/UX_With_Hani" target="_blank" rel="noopener">Telegram</a></nav>
+</div></footer>
+
+</div>
+<div class="route" data-route="ai" data-title="Designing with AI · Haniye Fereidooni" hidden>
+
+<header class="topbar" data-topbar>
+<div class="wrap bar">
+<a class="brand" href="#/" aria-label="Haniye Fereidooni, home"><svg class="fish " width="34" height="22" viewBox="0 0 110 70" aria-hidden="true"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg><span class="bn">Haniye Fereidooni</span><span class="role">Product designer</span></a>
+<nav class="links" aria-label="Main"><div class="pill-nav"><a href="#/work">Work</a><a href="#/about">About</a><a href="#/ai" aria-current="page">With AI</a><a href="#/talks">Talks</a><a href="#/hobbies">Hobbies</a><a href="#resume" data-resume>Resume <span aria-hidden="true">↓</span></a></div><a class="btn sm" href="#/contact">Get in touch</a></nav>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-ai"><span class="menu-ic" aria-hidden="true"><i></i><i></i></span><span class="menu-t">Menu</span></button>
+</div>
+</header>
+<div class="menu" id="menu-ai" hidden>
+<nav class="menu-links wrap" aria-label="Menu"><a href="#/work"><span class="i">01</span><span class="l">Work</span></a><a href="#/about"><span class="i">02</span><span class="l">About</span></a><a href="#/ai" aria-current="page"><span class="i">03</span><span class="l">With AI</span></a><a href="#/talks"><span class="i">04</span><span class="l">Talks</span></a><a href="#/hobbies"><span class="i">05</span><span class="l">Hobbies</span></a><a href="#resume" data-resume><span class="i">06</span><span class="l">Resume ↓</span></a><a href="#/contact"><span class="i">07</span><span class="l">Get in touch</span></a></nav>
+<div class="wrap menu-foot"><a href="mailto:haniyefereidooni@gmail.com">Email</a><a href="https://www.linkedin.com/in/haniye-fereidooni/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/hanie-fre" target="_blank" rel="noopener">GitHub</a><a href="https://t.me/UX_With_Hani" target="_blank" rel="noopener">Telegram</a></div>
+<div class="menu-scales scales" data-d="110" data-seed="7" data-black="2"></div>
+</div>
+<main>
+<section class="wrap intro">
+<span class="eyebrow" style="margin-top:0">How I work</span>
+<h1 class="display">Designing with AI<svg class="fish drift" width="130" height="83" viewBox="0 0 110 70" role="img" aria-label="Red fish"><path d="M4 35A44 44 0 0 1 74 35A44 44 0 0 1 4 35Z" fill="var(--fish)"/><path d="M70 35L106 12V58Z" fill="var(--fish)"/><circle cx="22" cy="31" r="3.4" fill="#ffffff"/></svg></h1>
+<div class="lede-row"><p class="lede">AI makes the ordinary fast. I use it to research, explore and build faster, and I keep the judgment for myself.</p><a class="btn ghost" href="#/talks">My talks on this <span class="arrow">→</span></a></div>
+</section>
+
+<section class="wrap mt-l"><div class="panel-dark"><span class="eyebrow">The average trap</span><p class="quote mt-m">Mediocre isn’t a bug. It’s the default of a machine that runs on probability.</p></div></section>
+
+<section class="wrap sec">
+<div class="head-row"><div class="stack gap-s"><span class="eyebrow">01 — What I found</span><h2 class="h2 ">Left alone, AI designs the average</h2></div><p class="body side muted">I gave Stitch, Figma Make and Claude Design the same brief. Three tools with very different personalities, and all three landed in almost the same place.</p></div>
+<div class="g3 mt-l"><div class="card"><span class="num">01</span><span class="t">It knows</span><span class="d">Asked which parts of its own design were clichés, each tool listed them. It knew all along; it just wasn’t asked.</span></div><div class="card"><span class="num">02</span><span class="t">Structure moves last</span><span class="d">Push back and the content changes first, then the tone, then the looks. The structure, often never.</span></div><div class="card"><span class="num">03</span><span class="t">The next average</span><span class="d">“I swapped a tired cliché for a trendy one,” Claude said about its own redesign.</span></div></div>
+</section>
+
+<section class="wrap sec">
+<div class="head-row"><div class="stack gap-s"><span class="eyebrow">02 — What I give it</span><h2 class="h2 ">The output is only as good as the input</h2></div><p class="body side muted">Every gap I leave, AI fills with the most likely answer. So I fill the gaps myself, with five kinds of input.</p></div>
+<div class="ai-ins mt-l"><div class="ai-in"><span class="num">01</span><span class="t">References</span><span class="for">for the look</span><span class="d">Images, moodboards and sites I admire, instead of adjectives. One picture says more than ten words.</span></div><div class="ai-in"><span class="num">02</span><span class="t">Known patterns</span><span class="for">for the structure</span><span class="d">I point it at proven structures, like strong case studies, and let it pull out the pattern.</span></div><div class="ai-in"><span class="num">03</span><span class="t">Raw material</span><span class="for">for the content</span><span class="d">Real notes, data, screenshots and old files. It sorts and edits. It never invents.</span></div><div class="ai-in"><span class="num">04</span><span class="t">Rules</span><span class="for">for the boundaries</span><span class="d">No made-up numbers, nothing confidential, no claim I can’t back in an interview.</span></div><div class="ai-in"><span class="num">05</span><span class="t">Acceptance criteria</span><span class="for">for the quality</span><span class="d">What “done” means: mobile, accessibility and the small details that make it feel real.</span></div></div>
+<div class="ai-eq mt-m"><span>References</span><i>+</i><span>Patterns</span><i>+</i><span>Raw material</span><i>+</i><span>Rules</span><i>+</i><span>Criteria</span><i>=</i><b>Work that looks like me, not like the average</b></div>
+</section>
+
+<section class="wrap sec">
+<div class="stack gap-s"><span class="eyebrow">03 — Where it fits</span><h2 class="h2 ">A faster process, the same judgment</h2></div>
+<div class="fit-rows mt-l"><div class="fit-row fit-head"><span class="eyebrow sm">Stage</span><span class="eyebrow sm">AI helps with</span><span class="eyebrow sm">I keep</span></div><div class="fit-row"><span class="st">Research</span><p>An AI-assisted expert walkthrough with Claude in Chrome, cross-checked against real analytics.</p><p class="me">The questions, and what counts as a finding.</p></div><div class="fit-row"><span class="st">Synthesis</span><p>Clustering notes into affinity diagrams, drafting journey maps and findings tables.</p><p class="me">Checking every claim against the evidence.</p></div><div class="fit-row"><span class="st">Exploration</span><p>Several visual directions in minutes, in Claude Design.</p><p class="me">Picking, combining, and pushing past the obvious one.</p></div><div class="fit-row"><span class="st">Prototyping</span><p>Vibe coding clickable prototypes and small sites.</p><p class="me">The brief and the definition of done.</p></div><div class="fit-row"><span class="st">Critique</span><p>Numbered audits of my own work before anyone else sees it.</p><p class="me">Deciding what is worth fixing.</p></div></div>
+</section>
+
+<section class="wrap sec"><div class="panel-dark ai-rules">
+<div class="stack gap-s"><span class="eyebrow">Rules I keep</span><h2 class="h2 md">Five lines I don’t cross</h2></div>
+<ul><li><span class="num light">01</span><span>AI drafts. I decide.</span></li><li><span class="num light">02</span><span>Show it, don’t describe it.</span></li><li><span class="num light">03</span><span>No number it can’t source.</span></li><li><span class="num light">04</span><span>A confident answer still gets checked.</span></li><li><span class="num light">05</span><span>One signature idea, not ten effects.</span></li></ul>
+</div></section>
+
+<section class="wrap sec">
+<div class="g12 align-start">
+<div style="grid-column:span 5"><div class="stack gap-s"><span class="eyebrow">04 — Proof</span><h2 class="h2 ">This site was built this way</h2></div></div>
+<div class="stack gap-m" style="grid-column:7 / span 6">
+<p class="body-l">I built this portfolio with Claude, from a one-page brief and a few references to the fish that follows your cursor, the bowl on the contact page and the aquarium on the hobbies page.</p>
+<p class="body-l">I wrote the brief, gave the references and the raw material, made the design calls and reviewed every round. Claude wrote the code.</p>
+<div class="pills"><a class="btn ghost" href="#/contact">Feed the fish <span class="arrow">→</span></a><a class="btn ghost" href="#/hobbies">Visit the aquarium <span class="arrow">→</span></a></div>
+</div></div>
+</section>
+
+<section class="wrap sec-s">
+<div class="stack gap-m"><span class="eyebrow">Tools I use</span><div class="pills"><span class="chip">Claude</span><span class="chip">Claude Design</span><span class="chip">Claude in Chrome</span><span class="chip">ChatGPT and Codex</span><span class="chip">Lovable</span><span class="chip">Figma, connected to AI</span><span class="chip">Microsoft Clarity</span></div></div>
+</section>
+<section class="wrap sec-s"><a class="next" href="#/talks"><div><span class="eyebrow">I teach this too — Workshop</span><span class="nm">Vibe Coding for Designers and PMs</span></div><span class="go" aria-hidden="true">→</span></a></section>
 </main>
 <section class="foot" aria-label="Contact">
 <div class="scales" data-d="148" data-seed="3" data-black="2"></div>
@@ -1451,6 +1728,272 @@ window.__RESUME__ = "JVBERi0xLjQKJeLjz9MKMSAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZyAvUGF
     setFed();
     requestAnimationFrame(tick);
   }
+
+  /* ---------- home: project shortcuts preview ---------- */
+  var quick = document.querySelector('.quick');
+  if (quick) {
+    var qimgs = [].slice.call(document.querySelectorAll('.qprev img'));
+    var showQ = function (i) { qimgs.forEach(function (im) { im.classList.toggle('on', im.getAttribute('data-prev') === i); }); };
+    [].forEach.call(quick.querySelectorAll('a[data-prev]'), function (a) {
+      var i = a.getAttribute('data-prev');
+      a.addEventListener('mouseenter', function () { showQ(i); });
+      a.addEventListener('focus', function () { showQ(i); });
+      a.addEventListener('mouseleave', function () { showQ(null); });
+      a.addEventListener('blur', function () { showQ(null); });
+    });
+  }
+
+  /* ---------- hobbies: the fish's day off ---------- */
+  (function () {
+  var tank = document.querySelector('.tank');
+  if (tank) {
+    var T = 600;
+    var gv = tank.querySelector('.gravel'), gcs = ['#E2E2DF', '#D7D7D4', '#CACAC7', '#BBBBB8', '#ECECEA', '#A8A8A5'], gvh = '';
+    for (var r1 = 0; r1 < 2; r1++) for (var c1 = -1; c1 < 13; c1++) {
+      var gcol2 = (r1 === 0 && c1 === 4) || (r1 === 1 && c1 === 9) ? '#111111' : gcs[Math.abs(c1 * 5 + r1 * 3) % gcs.length];
+      gvh += '<i style="left:' + ((c1 * 50 + (r1 % 2 ? 25 : 0)) / T * 100) + '%;top:' + ((548 + r1 * 24) / T * 100) + '%;width:7.5%;height:7.5%;background:' + gcol2 + '"></i>';
+    }
+    gv.innerHTML = gvh;
+
+    var rigEl = tank.querySelector('.rig'), pupil = tank.querySelector('.pupil');
+    var statusEl = document.querySelector('.hob-status');
+    var hcards = [].slice.call(document.querySelectorAll('.hcard'));
+    var tb = new Bubbles(tank);
+    var K = function () { return tank.clientWidth / T; };
+    var H = { mode: 'idle', t0: 0, fx: 300, fy: 320, dir: 1, tx: 300, ty: 320, sc: 1, sy: 1, rot: 0, bob: 0, n: 0, next: 0, lastB: 0, ang: 0, floats: [], cup: null, px: null, py: null, phase: 0 };
+    var IDLE = 'Pick a hobby on either side';
+    var ARIA = {
+      idle: 'An aquarium with a red fish, swimming around and waiting for you to pick a hobby.',
+      running: 'The red fish runs fast laps around the tank.',
+      yoga: 'The red fish floats still in the middle of the tank and breathes slowly.',
+      reading: 'The red fish reads an open book, turning the pages.',
+      podcasts: 'The red fish wears headphones and drifts around, listening.',
+      music: 'The red fish bobs to a beat while music notes float up.',
+      cafe: 'Coffee cups drop into the tank and the red fish hunts each one down.',
+      watching: 'The red fish has a big curious eye that follows your pointer.',
+      overthinking: 'The red fish swims in small circles while thought bubbles pile up above it.'
+    };
+    var THOUGHTS = ['what if…', 'was that weird?', '2px less?', 'should I have said…', 'but why though', 'maybe redo it?', 'hmm', '?', 'did they mean…', 'one more option?', 'is it too much?', 'wait'];
+    var clamp = function (v, a, b) { return Math.max(a, Math.min(b, v)); };
+    var rnd = function (a, b) { return a + Math.random() * (b - a); };
+
+    var place = function (f, k) {
+      f.el.style.transform = 'translate(' + (f.x * k).toFixed(1) + 'px,' + (f.y * k).toFixed(1) + 'px) translate(-50%,-50%)' + (f.scale ? ' scale(' + f.scale.toFixed(2) + ')' : '');
+    };
+    var spawn = function (cls, html, x, y, vx, vy, life) {
+      var el = document.createElement('span');
+      el.className = 'tk-f ' + cls;
+      el.innerHTML = html;
+      el.setAttribute('aria-hidden', 'true');
+      tank.appendChild(el);
+      var f = { el: el, x: x, y: y, vx: vx || 0, vy: vy || 0, born: performance.now(), life: life || 0, cls: cls };
+      H.floats.push(f);
+      place(f, K());
+      return f;
+    };
+    var clearFloats = function () {
+      H.floats.forEach(function (f) { f.el.remove(); });
+      H.floats = [];
+      if (H.cup) { H.cup.el.remove(); H.cup = null; }
+    };
+    var CUP = '<svg viewBox="0 0 44 40"><path class="steam" d="M14 9 q-4 -4 0 -8 M22 9 q-4 -4 0 -8" fill="none" stroke="#9A9A9A" stroke-width="2.2" stroke-linecap="round"/><path d="M6 13 H32 V27 a10 10 0 0 1 -10 10 H16 a10 10 0 0 1 -10 -10 Z" fill="#ffffff" stroke="#111111" stroke-width="2.4" stroke-linejoin="round"/><path d="M32 17 h3 a5 5 0 0 1 0 10 h-3" fill="none" stroke="#111111" stroke-width="2.4"/><rect x="6" y="13" width="26" height="5" fill="#D32A1E"/></svg>';
+
+    var setStatus = function (s) { if (statusEl.textContent !== s) statusEl.textContent = s; };
+
+    var steer = function (tx, ty, speed, dt) {
+      var dx = tx - H.fx, dy = ty - H.fy, d = Math.sqrt(dx * dx + dy * dy);
+      if (d > 1) {
+        var mv = Math.min(d, speed * dt / 1000);
+        H.fx += dx / d * mv; H.fy += dy / d * mv;
+        if (Math.abs(dx) > 3) H.dir = dx > 0 ? -1 : 1;
+      }
+      H.fx = clamp(H.fx, 85, 515); H.fy = clamp(H.fy, 120, 490);
+      return d;
+    };
+    var wander = function (now, speed, x0, x1, y0, y1) {
+      if (now > H.next || Math.abs(H.tx - H.fx) + Math.abs(H.ty - H.fy) < 8) { H.tx = rnd(x0, x1); H.ty = rnd(y0, y1); H.next = now + rnd(2600, 4200); }
+    };
+    var head = function () { return [H.fx + (H.dir === 1 ? -50 : 50), H.fy - 4]; };
+    var tail = function () { return [H.fx + (H.dir === 1 ? 70 : -70), H.fy - 2]; };
+
+    var drawRig = function (k) {
+      var sx = H.sc * H.dir, sy = H.sc * H.sy;
+      rigEl.style.transform = 'translate(' + ((H.fx - 75) * k).toFixed(1) + 'px,' + ((H.fy - 48 + H.bob) * k).toFixed(1) + 'px) rotate(' + H.rot.toFixed(2) + 'deg) scale(' + sx.toFixed(3) + ',' + sy.toFixed(3) + ')';
+    };
+    var lookAt = function (wx, wy) {
+      var ex = H.fx + (H.dir === 1 ? -45 : 45), ey = H.fy - 6;
+      var dx = wx - ex, dy = wy - ey, d = Math.sqrt(dx * dx + dy * dy) || 1;
+      var m = Math.min(4, d / 20);
+      pupil.setAttribute('cx', (12 + dx / d * m * H.dir).toFixed(2));
+      pupil.setAttribute('cy', (12 + dy / d * m).toFixed(2));
+    };
+
+    var setMode = function (m) {
+      clearFloats();
+      H.mode = m; H.t0 = performance.now(); H.n = 0; H.next = 0; H.sc = 1; H.sy = 1; H.rot = 0; H.bob = 0; H.phase = 0; H.run = 0; H.ang = Math.atan2(H.fy - 330, H.fx - 300);
+      tank.setAttribute('data-mode', m);
+      tank.setAttribute('aria-label', ARIA[m]);
+      hcards.forEach(function (c) { c.setAttribute('aria-pressed', c.getAttribute('data-hobby') === m ? 'true' : 'false'); });
+      pupil.setAttribute('cx', '12'); pupil.setAttribute('cy', '12');
+      if (reduce) pose(m);
+      else setStatus(m === 'idle' ? IDLE : '');
+    };
+
+    /* a still picture of each hobby, for reduced motion */
+    var pose = function (m) {
+      var k = K();
+      H.fx = m === 'reading' ? 360 : 300; H.fy = 320; H.dir = 1;
+      var S = {
+        idle: IDLE, running: 'Running laps', yoga: 'Inhale for four, exhale for four', reading: 'Page 12, still on the same chapter',
+        podcasts: 'Episode 212, playing at 1.5x', music: 'Now playing: a soundtrack for this exact mood', cafe: 'Side quest complete: one good café',
+        watching: 'Humans spotted: 1. Hi, that’s you', overthinking: 'Thoughts so far: too many to count'
+      };
+      if (m === 'yoga') spawn('lbl', 'inhale · exhale', 300, 220);
+      if (m === 'music') { spawn('note', '♪', 250, 230); spawn('note red', '♫', 350, 210); }
+      if (m === 'overthinking') { spawn('thought', 'what if…', 220, 220); spawn('thought', '2px less?', 380, 200); spawn('thought', 'hmm', 300, 150); }
+      if (m === 'cafe') { var c = spawn('cup found', CUP, 200, 470); c.scale = 1; place(c, k); }
+      setStatus(S[m]);
+      drawRig(k);
+    };
+
+    var frame = function (now, dt) {
+      var k = K(), t = now - H.t0, m = H.mode, i;
+      tank.style.setProperty('--k', k.toFixed(3));
+      H.bob = 0; H.sy = 1;
+      if (m === 'idle') {
+        wander(now, 0, 120, 480, 170, 440);
+        steer(H.tx, H.ty, 55, dt);
+        H.bob = Math.sin(now / 520) * 5;
+        if (now - H.lastB > 1500) { H.lastB = now; var hp = head(); tb.add(hp[0] * k, hp[1] * k, 8, -6, 0, 2600, 150 * k); }
+      } else if (m === 'running') {
+        H.ang += dt / 1000 * 2.1; H.run = (H.run || 0) + dt / 1000 * 2.1;
+        var lap = Math.floor(H.run / (Math.PI * 2));
+        steer(300 + 200 * Math.cos(H.ang), 320 + 125 * Math.sin(H.ang), 520, dt);
+        H.rot = Math.sin(now / 90) * 2;
+        if (lap > H.n) H.n = lap;
+        setStatus(H.n < 1 ? 'Warming up' : 'Lap ' + H.n + ', overthinking less already');
+        if (now - H.lastB > 260) { H.lastB = now; var tp = tail(); tb.add(tp[0] * k, tp[1] * k, 6, 0, 0, 1200, 40 * k); }
+      } else if (m === 'yoga') {
+        var dd = steer(300, 320, 140, dt);
+        if (dd < 3) {
+          H.dir = 1;
+          var ph = Math.sin(t / 6000 * Math.PI * 2);
+          H.sc = 1 + 0.1 * ph;
+          H.rot = 4 * Math.sin(t / 12000 * Math.PI * 2);
+          var half = Math.floor(t / 3000);
+          if (half !== H.phase) { H.phase = half; spawn('lbl', half % 2 ? 'exhale' : 'inhale', 300, 205, 0, -10, 2800); }
+          setStatus('Inhale for four, exhale for four');
+        } else setStatus('Finding a quiet spot');
+      } else if (m === 'reading') {
+        var dr = steer(360, 320, 140, dt);
+        if (dr < 3) { H.dir = 1; H.bob = Math.sin(now / 900) * 3; }
+        H.n = 12 + Math.floor(t / 3000);
+        setStatus('Page ' + H.n + ', still wondering why we do the weird things we do');
+      } else if (m === 'podcasts') {
+        wander(now, 0, 140, 460, 190, 430);
+        steer(H.tx, H.ty, 45, dt);
+        H.bob = Math.sin(now / 700) * 4;
+        if (now - H.lastB > 720) { H.lastB = now; var h1 = head(); spawn('wave', '', H.fx + (H.dir === 1 ? -38 : 38), H.fy - 14, 0, 0, 1700); }
+        setStatus('Episode 212, playing at 1.5x');
+      } else if (m === 'music') {
+        wander(now, 0, 170, 430, 230, 400);
+        steer(H.tx, H.ty, 60, dt);
+        var beat = Math.abs(Math.sin(now / 500 * Math.PI));
+        H.bob = -beat * 16; H.sy = 1 + (1 - beat) * 0.06;
+        H.rot = Math.sin(now / 1000 * Math.PI) * 6;
+        if (now - H.lastB > 500) { H.lastB = now; H.n++; spawn('note' + (H.n % 2 ? ' red' : ''), H.n % 3 ? '♪' : '♫', H.fx + rnd(-30, 30), H.fy - 60, rnd(-22, 22), -55, 2600); }
+        setStatus('Now playing: a soundtrack for this exact mood');
+      } else if (m === 'cafe') {
+        if (!H.cup && now > H.next) {
+          var cx = rnd(90, 510);
+          if (Math.abs(cx - H.fx) < 120) cx = H.fx > 300 ? rnd(90, 200) : rnd(400, 510);
+          H.cup = spawn('cup', CUP, cx, 70, 0, 0, 0);
+          H.cup.landed = false; H.cup.found = 0;
+        }
+        var cup = H.cup;
+        if (cup) {
+          if (!cup.landed) { cup.y += 300 * dt / 1000; if (cup.y >= 510) { cup.y = 510; cup.landed = true; } }
+          place(cup, k);
+          if (!cup.found) {
+            var mouthOff = H.dir === 1 ? -55 : 55;
+            var dc = steer(cup.x - mouthOff * 0.9, Math.min(cup.y - 40, 470), cup.landed ? 190 : 120, dt);
+            if (cup.landed && dc < 14) {
+              cup.found = now; H.n++;
+              cup.el.classList.add('found');
+              spawn('star', '★', cup.x, cup.y - 60, 0, -30, 1300);
+            }
+            setStatus(H.n ? 'Cafés found: ' + H.n + '. On to the next one' : 'Looking for a good café');
+          } else {
+            H.bob = Math.sin(now / 400) * 3;
+            setStatus(H.n === 1 ? 'Side quest complete: one good café' : 'Side quest complete: ' + H.n + ' good cafés');
+            if (now - cup.found > 1800) { cup.el.remove(); H.cup = null; H.next = now + 500; }
+          }
+        } else wander(now, 0, 140, 460, 200, 420);
+      } else if (m === 'watching') {
+        var wx = H.px, wy = H.py;
+        if (wx === null) { wx = 300 + Math.cos(now / 1600) * 200; wy = 300 + Math.sin(now / 1100) * 120; }
+        var gx = clamp(wx, 110, 490), gy = clamp(wy, 150, 460);
+        var dx2 = gx - H.fx, dy2 = gy - H.fy, d2 = Math.sqrt(dx2 * dx2 + dy2 * dy2);
+        if (d2 > 160) steer(gx, gy, 90 * Math.min(1, (d2 - 160) / 80 + 0.2), dt);
+        if (Math.abs(wx - H.fx) > 20) H.dir = wx > H.fx ? -1 : 1;
+        H.bob = Math.sin(now / 520) * 3;
+        lookAt(wx, wy);
+        setStatus(H.px === null ? 'Watching the world go by' : 'Humans spotted: 1. Hi, that’s you');
+      } else if (m === 'overthinking') {
+        H.ang += dt / 1000 * 1.7;
+        steer(300 + 60 * Math.cos(H.ang), 350 + 36 * Math.sin(H.ang), 220, dt);
+        var gap = Math.max(260, 900 - H.n * 35);
+        if (now - H.lastB > gap) {
+          H.lastB = now; H.n++;
+          spawn('thought', THOUGHTS[(H.n * 7) % THOUGHTS.length], clamp(H.fx + rnd(-90, 90), 90, 510), H.fy - 80, rnd(-18, 18), -40, 3400);
+        }
+        setStatus('Thoughts so far: ' + H.n + ', and counting');
+      }
+      /* floating bits */
+      for (i = H.floats.length - 1; i >= 0; i--) {
+        var f = H.floats[i];
+        if (f === H.cup || !f.life) continue;
+        var age = (now - f.born) / f.life;
+        if (age >= 1) { f.el.remove(); H.floats.splice(i, 1); continue; }
+        f.x += f.vx * dt / 1000; f.y += f.vy * dt / 1000;
+        if (f.cls === 'wave') f.scale = 0.9 + age * 1.6;
+        f.el.style.opacity = (age < 0.15 ? age / 0.15 : age > 0.65 ? (1 - age) / 0.35 : 1).toFixed(2);
+        place(f, k);
+      }
+      tb.step(now, 74 * k);
+      drawRig(k);
+    };
+
+    hcards.forEach(function (c) {
+      c.addEventListener('click', function () {
+        var m = c.getAttribute('data-hobby');
+        setMode(H.mode === m ? 'idle' : m);
+      });
+    });
+    var toTank = function (e) { var r = tank.getBoundingClientRect(), k = r.width / T; H.px = (e.clientX - r.left) / k; H.py = (e.clientY - r.top) / k; };
+    document.addEventListener('pointermove', function (e) { if (e.pointerType !== 'touch') toTank(e); });
+    document.addEventListener('pointerdown', function (e) { if (!e.target.closest('.hcard')) toTank(e); });
+
+    setMode('idle');
+    if (!reduce) {
+      var seen = true, last = performance.now(), raf = 0;
+      var tick2 = function (now) {
+        var dt = Math.min(48, now - last); last = now;
+        if (tank.offsetParent !== null) frame(now, dt);
+        raf = seen ? requestAnimationFrame(tick2) : 0;
+      };
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (ents) {
+          seen = ents[0].isIntersecting;
+          if (seen && !raf) { last = performance.now(); raf = requestAnimationFrame(tick2); }
+        }).observe(tank);
+      }
+      raf = requestAnimationFrame(tick2);
+    } else {
+      window.addEventListener('resize', function () { pose(H.mode); });
+    }
+  }
+  })();
 
   /* ---------- top bars (one per route) ---------- */
   [].forEach.call(document.querySelectorAll('[data-topbar]'), function (bar) {
